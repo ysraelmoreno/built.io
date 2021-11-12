@@ -8,7 +8,6 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-controls",
     "@storybook/addon-measure",
-    "@storybook/addon-viewport",
     "storybook-addon-outline",
   ],
   framework: "@storybook/react",

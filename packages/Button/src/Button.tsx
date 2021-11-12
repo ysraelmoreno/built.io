@@ -5,7 +5,7 @@ import { ButtonContainer } from "./styles";
 export type ButtonProps = {
   children: React.ReactNode;
   variants?: "primary" | "alternative" | "ghost" | "danger" | "success";
-  css: CSSProp;
+  css?: CSSProp;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 const Button = forwardRef(
@@ -14,7 +14,7 @@ const Button = forwardRef(
       <ButtonContainer
         variants={variants}
         ref={ref as MutableRefObject<HTMLButtonElement>}
-        css={css}
+        css={css || ``}
         {...props}
       >
         {children}
