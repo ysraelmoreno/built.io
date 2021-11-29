@@ -37,10 +37,16 @@ export default {
     },
   },
   argTypes: {
+    label: {
+      description: "Label do input",
+      control: "text",
+      type: "string",
+    },
     placeholder: {
       description: "Placeholder do input",
       control: "text",
       type: "string",
+      defaultValue: "",
     },
     icon: {
       description: "Ícone do input",
@@ -50,7 +56,7 @@ export default {
       },
     },
     floatingLabel: {
-      description: "Define se o placeholder será flutuante",
+      description: "Define se o label será flutuante",
       control: "boolean",
       type: "boolean",
     },
@@ -66,7 +72,7 @@ const Template: Story = (args) => (
 export const Primary = Template.bind({});
 
 Primary.args = {
-  placeholder: "Name",
+  label: "Name",
   icon: FiUser,
 };
 
@@ -74,27 +80,27 @@ export const WithNoFloatingLabel = Template.bind({});
 
 WithNoFloatingLabel.args = {
   floatingLabel: false,
-  placeholder: "Name",
+  label: "Name",
   icon: FiUser,
 };
 
 export const WithNoIcon = Template.bind({});
 
 WithNoIcon.args = {
-  placeholder: "Name",
+  label: "Name",
 };
 
 export const WithDefaultValue = Template.bind({});
 
 WithDefaultValue.args = {
-  placeholder: "Name",
+  label: "Name",
   defaultValue: "John Doe",
 };
 
 export const Alternative = Template.bind({});
 
 Alternative.args = {
-  placeholder: "Email",
+  label: "Email",
   icon: FiMail,
   variant: "alternative",
 };
@@ -102,14 +108,14 @@ Alternative.args = {
 export const AlternativeWithNoIcon = Template.bind({});
 
 AlternativeWithNoIcon.args = {
-  placeholder: "Email",
+  label: "Email",
   variant: "alternative",
 };
 
 export const AlternativeWithDefaultValue = Template.bind({});
 
 AlternativeWithDefaultValue.args = {
-  placeholder: "Email",
+  label: "Email",
   variant: "alternative",
   defaultValue: "John Doe",
 };
@@ -118,6 +124,6 @@ export const AlternativeWithNoFloatingLabel = Template.bind({});
 
 AlternativeWithNoFloatingLabel.args = {
   floatingLabel: false,
-  placeholder: "Email",
+  label: "Email",
   variant: "alternative",
 };

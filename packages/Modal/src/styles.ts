@@ -29,7 +29,7 @@ export const ModalContainer = styled.div<ModalContainerProps>`
   background-color: white;
   z-index: 99999999;
   width: 50%;
-  top: 50%;
+  top: 40%;
   transform: translateX(50%);
   border-radius: 5px;
   align-items: center;

@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 interface InputLabelProps {
   isFocused: boolean;
@@ -10,6 +10,14 @@ interface InputLabelProps {
 interface InputContainerProps {
   variant?: "primary" | "alternative";
 }
+
+const slideIn = keyframes`
+  from {
+    transform: translateY(-100%);
+  } to {
+    transform: translateY(0);
+  }
+`;
 
 export const InputContainer = styled.div<InputContainerProps>`
   display: flex;
@@ -91,4 +99,11 @@ export const InputLabel = styled.label<InputLabelProps>`
       transform: ${props.isFocused &&
       "translateY(-15px)  translateX(-5px) scale(0.8);"};
     `}
+`;
+
+export const ErrorMessage = styled.span`
+  color: #ff0000;
+  font-size: 11px;
+  overflow: hidden;
+  animation: ${slideIn} 0.3s ease-in-out;
 `;

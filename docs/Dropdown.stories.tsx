@@ -1,6 +1,5 @@
-import Progress, { ProgressProps } from "../packages/Progress/src";
+import Dropdown from "../packages/Dropdown/src/index";
 import { Story, Meta } from "@storybook/react/types-6-0";
-import { useCallback, useState } from "react";
 
 const componentDescription = `
 ---
@@ -18,11 +17,9 @@ import Button from "@built-io/button";
 Modifique os controles abaixo para interagir com as propriedades do componente:
 `;
 
-const NoIcon = null;
-
 export default {
-  title: "Design System/Progress",
-  component: Progress,
+  title: "Design System/Dropdown",
+  component: Dropdown,
   parameters: {
     layout: "centered",
     docs: {
@@ -39,16 +36,18 @@ export default {
   argTypes: {},
 } as Meta;
 
-const Template: Story<ProgressProps> = (args) => {
-  return (
-    <div style={{ width: "200px" }}>
-      <Progress {...args} />
-    </div>
-  );
-};
+const Template: Story = (args) => (
+  <div style={{ width: "200px" }}>
+    <Dropdown label="Click me!">
+      <ul>
+        <li>Teste 1</li>
+        <li>Teste 2</li>
+        <li>Teste 3</li>
+        <li>Teste 4</li>
+        <li>Teste 5</li>
+      </ul>
+    </Dropdown>
+  </div>
+);
 
 export const Primary = Template.bind({});
-
-Primary.args = {
-  percent: 0,
-};

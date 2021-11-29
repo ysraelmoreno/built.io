@@ -1,22 +1,17 @@
 import { useEffect, useState } from "react";
 import { ProgressContainer, ProgressBar, ProgressIndicator } from "./styles";
 
-interface ProgressProps {
+export interface ProgressProps {
   percent: number;
 }
 
-function Progress({ percent, ...props }: ProgressProps) {
-  const [percentage, setPercentage] = useState(0);
-
-  useEffect(() => {
-    setPercentage(percent);
-  }, [percent]);
+function Progress({ percent = 0, ...props }: ProgressProps) {
   return (
     <>
       <ProgressContainer>
-        <ProgressBar percent={percentage} />
+        <ProgressBar percent={percent > 100 ? 100 : percent} />
       </ProgressContainer>
-      <ProgressIndicator>{percentage}%</ProgressIndicator>
+      <ProgressIndicator>{percent}%</ProgressIndicator>
     </>
   );
 }
