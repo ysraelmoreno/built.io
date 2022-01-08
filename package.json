@@ -9,7 +9,7 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.16.0",
-    "@stitches/react": "^1.2.5",
+    "@stitches/react": "^1.2.6",
     "@storybook/addon-actions": "6.3.12",
     "@storybook/addon-controls": "^6.3.12",
     "@storybook/addon-docs": "^6.3.12",
