@@ -1,26 +1,33 @@
-import { CSSProp } from "styled-components";
-import { ButtonHTMLAttributes, forwardRef, MutableRefObject } from "react";
-import { ButtonContainer } from "./styles";
+import React, { ButtonHTMLAttributes } from "react";
+import { BYTCSS } from "@kaiju-ui/theme";
+import { ButtonVariants, Container } from "./styles";
 
-export type ButtonProps = {
-  children: React.ReactNode;
-  variants?: "primary" | "alternative" | "ghost" | "danger" | "success";
-  css?: CSSProp;
-} & ButtonHTMLAttributes<HTMLButtonElement>;
+export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  loading?: boolean;
+  disabled?: boolean;
+  variant?: "primary" | "secondary" | "alternative" | "ghost";
+  css?: BYTCSS;
+} & ButtonVariants;
 
-const Button = forwardRef(
-  ({ children, variants = "primary", css, ...props }: ButtonProps, ref) => {
-    return (
-      <ButtonContainer
-        variants={variants}
-        ref={ref as MutableRefObject<HTMLButtonElement>}
-        css={css || ``}
-        {...props}
-      >
-        {children}
-      </ButtonContainer>
-    );
-  }
-);
+function Button({
+  children,
+  loading = false,
+  disabled = false,
+  variant = "primary",
+  css,
+  ...rest
+}: ButtonProps) {
+  return (
+    <Container
+      disabled={loading || disabled}
+      loading={loading}
+      variant={variant}
+      css={css}
+      {...rest}
+    >
+      {loading ? "Loading..." : children}
+    </Container>
+  );
+}
 
 export default Button;

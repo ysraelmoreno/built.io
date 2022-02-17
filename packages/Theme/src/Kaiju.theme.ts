@@ -1,6 +1,6 @@
 import { orange, blue, tomato, gray, green } from "@radix-ui/colors";
 
-const BYT = {
+const KaijuUI = {
   colors: {
     primary: "#FF5C00",
     secondary: "#125FB3",
@@ -10,7 +10,7 @@ const BYT = {
     backgroundPrimary: "#FF5C00",
     backgroundSecondary: "#FF5C00",
 
-    primaryHover: "#DD5000",
+    primaryHover: "rgba(255, 152, 0, 1)",
     text: "#333333",
     textLight: "#fff",
     ...green,
@@ -27,4 +27,4 @@ const BYT = {
   },
 };
 
-export default BYT;
+export default KaijuUI;

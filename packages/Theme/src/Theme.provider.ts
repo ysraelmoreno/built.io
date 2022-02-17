@@ -1,6 +1,6 @@
 import { createStitches, CSS } from "@stitches/react";
 
-import BYT from "./BYT.theme";
+import KaijuUI from "./Kaiju.theme";
 import DarkTheme from "./Dark.theme";
 
 const {
@@ -12,9 +12,9 @@ const {
   keyframes,
   createTheme,
 } = createStitches({
-  theme: BYT,
+  theme: KaijuUI,
   prefix: "byt-",
-  media: BYT.media,
+  media: KaijuUI.media,
 });
 
 export const darkTheme = createTheme(DarkTheme);

@@ -1,8 +1,16 @@
 {
-  "name": "@byt/theme",
-  "version": "1.0.0",
+  "name": "@kaiju-ui/theme",
+  "version": "0.0.1-alpha",
   "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "license": "MIT",
+  "scripts": {
+    "build": "tsc && rollup -c"
+  },
   "dependencies": {
     "@radix-ui/colors": "^0.1.8",
     "@stitches/react": "^1.2.6"

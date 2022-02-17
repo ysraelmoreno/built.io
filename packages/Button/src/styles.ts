@@ -1,71 +1,95 @@
-import styled, { css, CSSProp } from "styled-components";
+import { VariantProps } from "@stitches/react";
+import { styled } from "@kaiju-ui/theme";
 
-type ButtonContainerProps = {
-  variants: "primary" | "alternative" | "ghost" | "danger" | "success";
-  css: CSSProp;
-};
+export const Container = styled("button", {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  position: "relative",
+  width: "100%",
+  height: "40px",
+  padding: "10px",
 
-export const ButtonContainer = styled.button<ButtonContainerProps>`
-  border: none;
-  background-color: #ff5c00;
-  color: #fff;
-  height: 45px;
-  width: 100%;
-  border-radius: 5px;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
+  border: "none",
+  borderRadius: "5px",
+  backgroundColor: "#fff",
+  color: "$primary",
+  fontWeight: "700",
+  transition: "all .2s ease",
+  zIndex: "3",
 
-  &:hover {
-    background-color: #d14b00;
-  }
+  overflow: "hidden",
 
-  &:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-    pointer-events: none;
-  }
+  svg: {
+    marginRight: "10px",
+    marginLeft: "0",
+  },
 
-  ${(props) =>
-    props.variants === "alternative" &&
-    css`
-      background-color: transparent;
-      border: 1px solid #ff5c00;
-      color: #ff5c00;
+  "&:hover": {
+    color: "white",
 
-      &:hover {
-        background-color: #ffe9dd;
-        border: 1px solid #d14b00;
-        color: #d14b00;
-      }
-    `}
+    "&:before": {
+      width: "100%",
+    },
+  },
 
-  ${(props) =>
-    props.variants === "ghost" &&
-    css`
-      color: #ff5c00;
-      background-color: transparent;
+  "&:disabled": {
+    pointerEvents: "none",
+  },
 
-      &:hover {
-        background-color: #ffe9dd;
-      }
-    `}
+  variants: {
+    loading: {
+      true: {
+        "&:after": {
+          backgroundColor: "$gray5",
+        },
+      },
+    },
+    variant: {
+      primary: {
+        backgroundColor: "$primary !important",
+        color: "$gray1",
 
-  ${(props) =>
-    props.variants === "danger" &&
-    css`
-      color: #fff;
-      background-color: #ff0000;
+        "&:hover": {
+          backgroundColor: "$primaryHover !important",
+          boxShadow: "0 0 5px 1px rgba(255, 103, 56, 0.3) ",
+        },
+      },
+      secondary: {
+        backgroundColor: "white !important",
+        color: "$primary",
 
-      &:hover {
-        background-color: #ce0000;
-      }
-    `}
+        "&:hover": {
+          color: "rgba(255, 103, 56, 0.6) !important",
+          backgroundColor: "rgba(201, 201, 201, 1)",
+          boxShadow: "0 0 5px 1px rgba(255, 103, 56, 0.3) ",
+        },
+      },
+      alternative: {
+        backgroundColor: "transparent",
+        border: "1px solid $primary !important",
+        color: "$primary   !important",
 
-  ${(props) =>
-    props.css &&
-    css`
-      ${props.css}
-    `}
-`;
+        "&:hover": {
+          backgroundColor: "rgba(255, 103, 56, 0.1) !important",
+          boxShadow: "0 0 2px 1px rgba(255, 103, 56, 0.2) ",
+        },
+      },
+      ghost: {
+        backgroundColor: "transparent !important",
+        border: "none",
+        color: "$gray",
+
+        "&:hover": {
+          color: "$primary",
+        },
+
+        "&:disabled": {
+          color: "$gray7",
+        },
+      },
+    },
+  },
+});
+
+export type ButtonVariants = VariantProps<typeof Container>;
