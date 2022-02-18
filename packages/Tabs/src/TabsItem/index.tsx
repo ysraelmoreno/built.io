@@ -17,8 +17,11 @@ function TabsItem({
   const { setTrigger, activeTab, handleTabChange } = useTabsContext();
 
   useEffect(() => {
-    setTrigger((prevState) => [...prevState, { id, value }]);
-  }, [id, value]);
+    setTrigger((prevState) => [
+      ...prevState,
+      { id: `trigger-${generateHash()}`, value },
+    ]);
+  }, [value]);
 
   return (
     <TabsItemContainer active={activeTab === value}>
