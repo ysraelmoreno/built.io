@@ -9,5 +9,5 @@ export default create({
   brandTitle: "Build.io Storybook",
   brandUrl: "https://example.com",
   brandImage:
-    "https://raw.githubusercontent.com/ysraelmoreno/built.io/main/assets/logo.png",
+    "https://raw.githubusercontent.com/ysraelmoreno/kaiju-ui/main/assets/logo.png",
 });

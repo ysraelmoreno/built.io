@@ -1,7 +1,6 @@
 import BYTGlobalCSS from "./BYT.global";
 
 export {
-  BYTCSS,
   config,
   css,
   darkTheme,
@@ -10,5 +9,7 @@ export {
   keyframes,
   styled,
 } from "./Theme.provider";
+
+export type { CSS } from "@stitches/react";
 
 export { BYTGlobalCSS };

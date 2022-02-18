@@ -11,6 +11,9 @@
     "baseUrl": "./packages",
     "paths": {
       "@kaiju-ui/button": ["button/src"],
+      "@kaiju-ui/input": ["input/src"],
+      "@kaiju-ui/tabs": ["tabs/src"],
+      "@kaiju-ui/flex": ["flex/src"],
       "@kaiju-ui/*": ["*/src"]
     }
   }
