@@ -8,6 +8,10 @@ export const CheckboxContainer = styled("button", {
   border: "none",
   height: "30px",
   width: "100%",
+
+  "&:hover": {
+    cursor: "pointer",
+  },
 });
 
 export const CheckboxBox = styled("div", {
@@ -23,9 +27,12 @@ export const CheckboxBox = styled("div", {
   borderRadius: 5,
 
   svg: {
-    color: "$gray1",
+    color: "$gray1 !important",
     width: "1.5rem",
     height: "1.5rem",
+    path: {
+      fill: "$gray1 !important",
+    },
   },
 
   transition: "all 0.2s ease",

@@ -1,10 +1,10 @@
 import React, { forwardRef, HTMLAttributes, RefObject } from "react";
-import { BYTCSS } from "@kaiju-ui/theme";
+import { CSS } from "@kaiju-ui/theme";
 import { FlexVariants, FlexWrapper } from "./styles";
 
 type FlexProps = {
   children?: React.ReactNode;
-  css?: BYTCSS;
+  css?: CSS;
 } & HTMLAttributes<HTMLDivElement> &
   FlexVariants;
 

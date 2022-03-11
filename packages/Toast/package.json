@@ -1,5 +1,5 @@
 {
-  "name": "@kaiju-ui/skeleton",
+  "name": "@kaiju-ui/toast",
   "version": "0.0.1-alpha",
   "main": "dist/index.js",
   "module": "dist/index.es.js",

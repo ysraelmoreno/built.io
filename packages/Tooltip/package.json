@@ -1,5 +1,5 @@
 {
-  "name": "@kaiju-ui/skeleton",
+  "name": "@kaiju-ui/tooltip",
   "version": "0.0.1-alpha",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -12,7 +12,10 @@
     "build": "tsc && rollup -c rollup.config.js"
   },
   "dependencies": {
-    "@kaiju-ui/theme": "0.0.1-alpha"
+    "@kaiju-ui/theme": "0.0.1-alpha",
+    "@kaiju-ui/flex": "0.0.1-alpha",
+    "@kaiju-ui/text": "0.0.1-alpha",
+    "@kaiju-ui/icon": "0.0.1-alpha"
   },
   "peerDependencies": {
     "react": "^17.0.0",

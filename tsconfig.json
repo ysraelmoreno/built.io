@@ -14,6 +14,9 @@
       "@kaiju-ui/input": ["input/src"],
       "@kaiju-ui/tabs": ["tabs/src"],
       "@kaiju-ui/flex": ["flex/src"],
+      "@kaiju-ui/toast": ["toast/src"],
+      "@kaiju-ui/text": ["text/src"],
+      "@kaiju-ui/tooltip": ["tooltip/src"],
       "@kaiju-ui/*": ["*/src"]
     }
   }

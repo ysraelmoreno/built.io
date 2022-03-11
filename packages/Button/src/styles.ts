@@ -27,6 +27,7 @@ export const Container = styled("button", {
 
   "&:hover": {
     color: "white",
+    cursor: "pointer",
 
     "&:before": {
       width: "100%",
@@ -34,7 +35,9 @@ export const Container = styled("button", {
   },
 
   "&:disabled": {
+    backgroundColor: "$gray7 !important",
     pointerEvents: "none",
+    cursor: "not-allowed",
   },
 
   variants: {
@@ -56,8 +59,8 @@ export const Container = styled("button", {
         },
       },
       secondary: {
-        backgroundColor: "white !important",
-        color: "$primary",
+        backgroundColor: "$secondary !important",
+        color: "$gray1",
 
         "&:hover": {
           color: "rgba(255, 103, 56, 0.6) !important",
@@ -78,7 +81,7 @@ export const Container = styled("button", {
       ghost: {
         backgroundColor: "transparent !important",
         border: "none",
-        color: "$gray",
+        color: "$primary",
 
         "&:hover": {
           color: "$primary",

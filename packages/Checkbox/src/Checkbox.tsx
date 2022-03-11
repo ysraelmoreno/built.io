@@ -1,7 +1,8 @@
 import React, {
-  RefObject,
+  ForwardedRef,
+  forwardRef,
   useCallback,
-  useEffect,
+  useImperativeHandle,
   useRef,
   useState,
 } from "react";
@@ -13,37 +14,47 @@ interface CheckboxProps {
   name: string;
 }
 
-function Checkbox({ children, name, ...props }: CheckboxProps) {
-  const [isChecked, setIsChecked] = useState(false);
+const Checkbox = forwardRef(
+  (
+    { children, name, ...props }: CheckboxProps,
+    forwardedRef: ForwardedRef<HTMLInputElement>
+  ) => {
+    const [isChecked, setIsChecked] = useState(false);
 
-  const checkboxRef = useRef<HTMLInputElement>(null);
+    const checkboxRef = useRef<HTMLInputElement>(null);
 
-  const handleCheck = useCallback(() => {
-    const checkboxValue = !isChecked;
-    setIsChecked(checkboxValue);
+    const handleCheck = useCallback(() => {
+      const checkboxValue = !isChecked;
+      setIsChecked(checkboxValue);
 
-    if (checkboxRef.current) {
-      checkboxRef.current.checked = checkboxValue ? true : false;
-    }
-  }, [isChecked, checkboxRef]);
+      if (checkboxRef?.current) {
+        checkboxRef.current.checked = checkboxValue ? true : false;
+      }
+    }, [isChecked, checkboxRef]);
 
-  return (
-    <>
-      <CheckboxContainer type="button" onClick={handleCheck}>
-        <CheckboxBox isChecked={isChecked}>
-          {isChecked && <CheckIcon />}
-        </CheckboxBox>
-        <CheckboxLabel>{children}</CheckboxLabel>
-      </CheckboxContainer>
-      <input
-        type="checkbox"
-        style={{ display: "none" }}
-        ref={checkboxRef}
-        name={name}
-        {...props}
-      />
-    </>
-  );
-}
+    useImperativeHandle(
+      forwardedRef,
+      () => checkboxRef.current as HTMLInputElement
+    );
+
+    return (
+      <>
+        <CheckboxContainer type="button" onClick={handleCheck}>
+          <CheckboxBox isChecked={isChecked}>
+            {isChecked && <CheckIcon />}
+          </CheckboxBox>
+          <CheckboxLabel>{children}</CheckboxLabel>
+        </CheckboxContainer>
+        <input
+          type="checkbox"
+          style={{ display: "none" }}
+          ref={checkboxRef}
+          name={name}
+          {...props}
+        />
+      </>
+    );
+  }
+);
 
 export default Checkbox;

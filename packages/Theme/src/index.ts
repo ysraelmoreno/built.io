@@ -8,8 +8,7 @@ export {
   globalCss,
   keyframes,
   styled,
+  CSS,
 } from "./Theme.provider";
-
-export type { CSS } from "@stitches/react";
 
 export { BYTGlobalCSS };

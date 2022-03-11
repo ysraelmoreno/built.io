@@ -1,29 +1,26 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Flex from "@kaiju-ui/flex/src";
-import Button from "@kaiju-ui/button/src";
+import Checkbox from "@kaiju-ui/checkbox/src";
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Alpha/Button",
-  component: Button,
+  title: "Alpha/Checkbox",
+  component: Checkbox,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    disabled: {
-      description: "Defines if the button is disabled",
-      control: "boolean",
+    children: {
+      description: "Defines the text of the Checkbox",
+      control: "text",
     },
-    variant: {
-      description: "Defines the variant of the button",
-      options: ["primary", "secondary", "alternative", "ghost"],
-      control: {
-        type: "select",
-      },
+    name: {
+      description: "Defines the name of the componet",
+      control: "text",
     },
   },
-} as ComponentMeta<typeof Button>;
+} as ComponentMeta<typeof Checkbox>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-export const Template: ComponentStory<typeof Button> = (args) => (
+export const Template: ComponentStory<typeof Checkbox> = (args) => (
   <Flex
     alignItems="center"
     justifyContent="center"
@@ -33,7 +30,7 @@ export const Template: ComponentStory<typeof Button> = (args) => (
       },
     }}
   >
-    <Button {...args} />
+    <Checkbox name={args.name}>{args.children}</Checkbox>
   </Flex>
 );
 

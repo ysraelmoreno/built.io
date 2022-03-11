@@ -10,7 +10,7 @@ import React, {
   useState,
 } from "react";
 
-import { BYTCSS } from "@kaiju-ui/theme";
+import { CSS } from "@kaiju-ui/theme";
 
 import StrenghtPassword from "./StrenghtPassword";
 
@@ -28,7 +28,7 @@ type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   name: string;
   label: string;
   theme?: "light" | "primary";
-  css?: BYTCSS;
+  css?: CSS;
   variation?: "primary" | "secondary";
 };
 
