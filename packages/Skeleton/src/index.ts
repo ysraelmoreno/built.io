@@ -1,3 +1,3 @@
-export { default } from "./Button";
+export { default } from "./Skeleton";
 
-export type { ButtonProps } from "./Button";
+export type { SkeletonProps } from "./Skeleton";

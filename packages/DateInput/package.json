@@ -1,0 +1,29 @@
+{
+  "name": "@kaiju-ui/date-input",
+  "version": "0.0.1-alpha",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && rollup -c rollup.config.js"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "typescript": "^4.5.4",
+    "@kaiju-ui/theme": "0.0.1-alpha",
+    "@kaiju-ui/button": "0.0.1-alpha",
+    "@kaiju-ui/flex": "0.0.1-alpha",
+    "@kaiju-ui/portal": "0.0.1-alpha",
+    "@kaiju-ui/system": "0.0.1-alpha",
+    "react-icons": "^4.3.1",
+    "@kaiju-ui/text": "0.0.1-alpha"
+  }
+}

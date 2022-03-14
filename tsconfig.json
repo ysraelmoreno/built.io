@@ -10,13 +10,18 @@
     "skipLibCheck": true,
     "baseUrl": "./packages",
     "paths": {
-      "@kaiju-ui/button": ["button/src"],
       "@kaiju-ui/input": ["input/src"],
+      "@kaiju-ui/date-input": ["date-input/src"],
+      "@kaiju-ui/button": ["button/src"],
       "@kaiju-ui/tabs": ["tabs/src"],
       "@kaiju-ui/flex": ["flex/src"],
       "@kaiju-ui/toast": ["toast/src"],
       "@kaiju-ui/text": ["text/src"],
+      "@kaiju-ui/portal": ["portal/src"],
       "@kaiju-ui/tooltip": ["tooltip/src"],
+      "@kaiju-ui/icon": ["icon/src"],
+      "@kaiju-ui/theme": ["theme/src"],
+      "@kaiju-ui/collapse": ["collapse/src"],
       "@kaiju-ui/*": ["*/src"]
     }
   }

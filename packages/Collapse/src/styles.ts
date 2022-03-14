@@ -1,8 +1,27 @@
-import { styled } from "@kaiju-ui/theme";
+import { styled, keyframes } from "@kaiju-ui/theme";
+
+const openCollapse = keyframes({
+  from: {
+    transform: "scaleY(0)",
+  },
+  to: {
+    transform: "scaleY(1)",
+  },
+});
+
+const closeCollapse = keyframes({
+  from: {
+    transform: "scaleY(1)",
+  },
+  to: {
+    transform: "scaleY(0)",
+  },
+});
 
 export const CollapseContainer = styled("div", {
   borderRadius: "10px",
   padding: "10px",
+  width: "100%",
 
   h5: {
     opacity: "0.4",
@@ -16,7 +35,9 @@ export const CollapseItemTrigger = styled("button", {
   cursor: "pointer",
   padding: "15px",
   background: "#FFF",
+  height: "100%",
   border: "none",
+  borderTop: "2px solid $primary",
   borderBottom: "2px solid $primary",
   display: "flex",
   borderRadius: "5px",
@@ -44,29 +65,44 @@ export const CollapseItemTrigger = styled("button", {
       variant: "special",
       active: true,
       css: {
-        backgroundColor: "rgba(218,218,218,0.8)",
-        border: "1px solid #C4C4C4",
+        color: "$gray1",
+        backgroundColor: "$primary",
+        border: "1px solid $primary",
       },
     },
   ],
 });
 
 export const CollapseContentContainer = styled("div", {
-  display: "none",
-  padding: "20px 15px 15px 15px",
+  display: "block",
+  overflow: "hidden",
   marginTop: "-10px",
+  opacity: 0,
+  padding: "0 15px",
+  height: "0 ",
   borderBottom: "1px solid rgba(218, 218, 218, 0.8)",
   borderLeft: "1px solid rgba(218, 218, 218, 0.8)",
   borderRight: "1px solid rgba(218, 218, 218, 0.8)",
-
   borderBottomLeftRadius: "10px",
   borderBottomRightRadius: "10px",
+  transition: "all 0.4s ease",
+  transformOrigin: "top",
 
   variants: {
     active: {
       true: {
-        display: "block",
+        padding: "20px 15px 15px 15px",
+        height: "var(--collapse-content-height)",
+        opacity: "1",
       },
+    },
+    type: {
+      special: {
+        borderBottom: "1px solid $primary",
+        borderLeft: "1px solid $primary",
+        borderRight: "1px solid $primary",
+      },
+      default: {},
     },
   },
 });

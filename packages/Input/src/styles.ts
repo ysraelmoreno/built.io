@@ -119,7 +119,6 @@ export const Label = styled("label", {
 export const InputWrapper = styled("input", {
   backgroundColor: "transparent",
   border: "none",
-  height: "45px",
   width: "100%",
   marginTop: 10,
   padding: 10,

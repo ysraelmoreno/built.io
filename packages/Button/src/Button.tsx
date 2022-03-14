@@ -1,12 +1,12 @@
 import React, { ButtonHTMLAttributes } from "react";
-import { BYTCSS } from "@kaiju-ui/theme";
+import { CSS } from "@kaiju-ui/theme";
 import { ButtonVariants, Container } from "./styles";
 
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   loading?: boolean;
   disabled?: boolean;
   variant?: "primary" | "secondary" | "alternative" | "ghost";
-  css?: BYTCSS;
+  css?: CSS;
 } & ButtonVariants;
 
 function Button({
