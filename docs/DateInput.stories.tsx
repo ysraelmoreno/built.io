@@ -6,6 +6,9 @@ import DateInput from "@kaiju-ui/date-input/src";
 export default {
   title: "Alpha/DateInput",
   component: DateInput,
+  parameters: {
+    layout: "centered",
+  },
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     label: {

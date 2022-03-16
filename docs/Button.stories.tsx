@@ -6,6 +6,9 @@ import Button from "@kaiju-ui/button/src";
 export default {
   title: "Alpha/Button",
   component: Button,
+  parameters: {
+    layout: "centered",
+  },
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     disabled: {

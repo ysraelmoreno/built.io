@@ -57,15 +57,23 @@ export const Container = styled("button", {
           backgroundColor: "$primaryHover !important",
           boxShadow: "0 0 5px 1px rgba(255, 103, 56, 0.3) ",
         },
+
+        "&:active": {
+          backgroundColor: "#FF9C65 !important",
+        },
       },
       secondary: {
         backgroundColor: "$secondary !important",
         color: "$gray1",
 
         "&:hover": {
-          color: "rgba(255, 103, 56, 0.6) !important",
+          color: "white !important",
           backgroundColor: "rgba(201, 201, 201, 1)",
           boxShadow: "0 0 5px 1px rgba(255, 103, 56, 0.3) ",
+        },
+
+        "&:active": {
+          backgroundColor: "#67B2E8 !important",
         },
       },
       alternative: {
@@ -77,6 +85,10 @@ export const Container = styled("button", {
           backgroundColor: "rgba(255, 103, 56, 0.1) !important",
           boxShadow: "0 0 2px 1px rgba(255, 103, 56, 0.2) ",
         },
+
+        "&:active": {
+          backgroundColor: "rgba(255, 103, 56, 0.4) !important",
+        },
       },
       ghost: {
         backgroundColor: "transparent !important",
@@ -84,11 +96,16 @@ export const Container = styled("button", {
         color: "$primary",
 
         "&:hover": {
+          backgroundColor: "rgba(255, 103, 56, 0.1) !important",
           color: "$primary",
         },
 
         "&:disabled": {
           color: "$gray7",
+        },
+
+        "&:active": {
+          backgroundColor: "rgba(255, 103, 56, 0.4) !important",
         },
       },
     },

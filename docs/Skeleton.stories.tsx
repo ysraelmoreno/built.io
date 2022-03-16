@@ -6,6 +6,9 @@ import Skeleton from "@kaiju-ui/skeleton/src";
 export default {
   title: "Alpha/Skeleton",
   component: Skeleton,
+  parameters: {
+    layout: "centered",
+  },
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     width: {

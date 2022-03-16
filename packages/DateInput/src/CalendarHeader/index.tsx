@@ -1,7 +1,7 @@
 import React from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@modulz/radix-icons";
 import Button from "@kaiju-ui/button/src";
-import { useDateInputContext } from "./DateInputContext";
+import { useDateInputContext } from "../DateInputContext";
 import Flex from "@kaiju-ui/flex";
 import Text from "@kaiju-ui/text";
 

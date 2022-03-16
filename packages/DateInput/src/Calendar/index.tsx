@@ -1,11 +1,11 @@
-import { useDateInputContext } from "./DateInputContext";
+import { useDateInputContext } from "../DateInputContext";
 import { CalendarContainer } from "./styles";
 
 import React, { useCallback, useEffect, useRef } from "react";
-import Day from "./Day";
-import Weekdays from "./Weekdays";
-import CalendarHeader from "./CalendarHeader";
-import generateHash from "./utils/generateHash";
+import Day from "../Day";
+import Weekdays from "../Weekdays";
+import CalendarHeader from "../CalendarHeader";
+import generateHash from "../utils/generateHash";
 import Flex from "@kaiju-ui/flex";
 import Text from "@kaiju-ui/text";
 import Portal from "@kaiju-ui/portal";
@@ -70,7 +70,7 @@ function Calendar() {
           ref={calendarRef}
           css={{
             zIndex: 99999,
-            transform: `translate(${positions.x}px, ${positions.y + 90}px)`,
+            transform: `translate(${positions.x}px, ${positions.y + 60}px)`,
           }}
         >
           <Text

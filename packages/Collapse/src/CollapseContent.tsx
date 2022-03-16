@@ -20,7 +20,7 @@ function CollapseContent({ children, value }: ICollpaseContentProps) {
         type={collapseType}
         active={contentOpened.includes(value)}
         style={{
-          ["--collapse-content-height" as any]: `${
+          [`--collapse-content-height` as any]: `${
             containerRef.current?.scrollHeight
               ? containerRef.current?.scrollHeight + 10
               : 0

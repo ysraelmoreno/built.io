@@ -6,6 +6,9 @@ import Input from "@kaiju-ui/input/src";
 export default {
   title: "Alpha/Input",
   component: Input,
+  parameters: {
+    layout: "centered",
+  },
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     label: {

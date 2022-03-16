@@ -1,5 +1,8 @@
 {
   "name": "@kaiju-ui/button",
+  "author": "Ysrael Moreno <ysraelmoreno02@gmail.com>",
+  "description": "A button component for Kaiju UI",
+  "license": "MIT",
   "version": "0.0.1-alpha",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -10,6 +13,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && rollup -c rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ysraelmoreno/kaiju-ui.git"
   },
   "dependencies": {
     "@kaiju-ui/theme": "0.0.1-alpha"

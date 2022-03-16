@@ -7,6 +7,9 @@ import Tabs, { TabsContent, TabsItem, TabsList } from "@kaiju-ui/tabs/src";
 export default {
   title: "Alpha/Tabs",
   component: Tabs,
+  parameters: {
+    layout: "centered",
+  },
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     backgroundColor: { control: "color" },

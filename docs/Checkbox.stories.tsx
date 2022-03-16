@@ -6,6 +6,9 @@ import Checkbox from "@kaiju-ui/checkbox/src";
 export default {
   title: "Alpha/Checkbox",
   component: Checkbox,
+  parameters: {
+    layout: "centered",
+  },
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     children: {

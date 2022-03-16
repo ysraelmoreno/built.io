@@ -6,6 +6,9 @@ import Collapse, { CollapseItem } from "@kaiju-ui/collapse/src";
 export default {
   title: "Alpha/Collapse",
   component: Collapse,
+  parameters: {
+    layout: "centered",
+  },
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
 } as ComponentMeta<typeof Collapse>;
@@ -21,7 +24,7 @@ export const Template: ComponentStory<typeof Collapse> = (args) => (
       collapseTitle={args.collapseTitle}
       defaultValue={args.defaultValue}
       isMultiple={args.isMultiple}
-      type={args.type}
+      isSpecial={args.isSpecial}
     >
       <CollapseItem value="testing" title="Test 1">
         Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin

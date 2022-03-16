@@ -1,12 +1,21 @@
 import React, { useEffect } from "react";
-import { BYTCSS } from "@kaiju-ui/theme";
+import { CSS } from "@kaiju-ui/theme";
 import { CollapseProvider, useCollapse } from "./CollapseContext";
 import { CollapseContainer } from "./styles";
 
 interface CollapseProps {
   children: React.ReactNode;
   collapseTitle?: string;
-  css?: BYTCSS;
+  css?: CSS;
+  isSpecial?: boolean;
+  isMultiple?: boolean;
+  defaultValue?: string | string[];
+}
+
+interface CollapseWrapperProps {
+  children: React.ReactNode;
+  collapseTitle?: string;
+  css?: CSS;
   type?: "special" | "default";
   isMultiple?: boolean;
   defaultValue?: string | string[];
@@ -16,7 +25,7 @@ function Collapse({
   children,
   collapseTitle,
   css,
-  type = "default",
+  isSpecial = false,
   isMultiple = false,
   defaultValue,
 }: CollapseProps) {
@@ -27,7 +36,7 @@ function Collapse({
           collapseTitle={collapseTitle}
           isMultiple={isMultiple}
           css={css}
-          type={type}
+          type={isSpecial ? "special" : "default"}
           defaultValue={defaultValue}
         >
           {children}
@@ -44,7 +53,7 @@ function CollapseWrapper({
   type,
   isMultiple = false,
   defaultValue,
-}: CollapseProps) {
+}: CollapseWrapperProps) {
   const {
     handleCollapseMultiple,
     handleDefaultValue,

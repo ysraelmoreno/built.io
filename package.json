@@ -7,7 +7,7 @@
   "workspaces": [
     "packages/*"
   ],
-  "devDependencies": {
+  "dependencies": {
     "@babel/core": "^7.16.0",
     "@modulz/radix-icons": "^4.0.0",
     "@open-wc/building-rollup": "^2.0.1",
@@ -45,6 +45,7 @@
     "bootstrap": "lerna bootstrap --use-workspaces",
     "storybook": "start-storybook -p 6006",
     "serve": "storybook:serve",
-    "build": "build-storybook"
+    "build": "build-storybook",
+    "build-static-webapp": "build-static-webapp"
   }
 }

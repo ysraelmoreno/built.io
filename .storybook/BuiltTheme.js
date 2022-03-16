@@ -8,7 +8,7 @@ export default create({
   appBorderRadius: "5px",
 
   appBg: "#000100",
-  appContentBg: "silver",
+  appContentBg: "white",
 
   barBg: "#000100",
 

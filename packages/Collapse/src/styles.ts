@@ -65,7 +65,12 @@ export const CollapseItemTrigger = styled("button", {
       variant: "special",
       active: true,
       css: {
-        color: "$gray1",
+        color: "$gray1 !important",
+        svg: {
+          path: {
+            color: "$gray1 !important",
+          },
+        },
         backgroundColor: "$primary",
         border: "1px solid $primary",
       },
@@ -77,12 +82,11 @@ export const CollapseContentContainer = styled("div", {
   display: "block",
   overflow: "hidden",
   marginTop: "-10px",
-  opacity: 0,
   padding: "0 15px",
   height: "0 ",
-  borderBottom: "1px solid rgba(218, 218, 218, 0.8)",
-  borderLeft: "1px solid rgba(218, 218, 218, 0.8)",
-  borderRight: "1px solid rgba(218, 218, 218, 0.8)",
+  borderBottom: "1px solid rgba(218, 218, 218, 0)",
+  borderLeft: "1px solid rgba(218, 218, 218, 0)",
+  borderRight: "1px solid rgba(218, 218, 218, 0)",
   borderBottomLeftRadius: "10px",
   borderBottomRightRadius: "10px",
   transition: "all 0.4s ease",
@@ -93,7 +97,9 @@ export const CollapseContentContainer = styled("div", {
       true: {
         padding: "20px 15px 15px 15px",
         height: "var(--collapse-content-height)",
-        opacity: "1",
+        borderBottom: "1px solid rgba(218, 218, 218, 0.8)",
+        borderLeft: "1px solid rgba(218, 218, 218, 0.8)",
+        borderRight: "1px solid rgba(218, 218, 218, 0.8)",
       },
     },
     type: {
@@ -105,6 +111,27 @@ export const CollapseContentContainer = styled("div", {
       default: {},
     },
   },
+
+  compoundVariants: [
+    {
+      type: "special",
+      active: false,
+      css: {
+        borderBottom: "1px solid rgba(218, 218, 218, 0)",
+        borderRight: "1px solid rgba(218, 218, 218, 0)",
+        borderLeft: "1px solid rgba(218, 218, 218, 0)",
+      },
+    },
+    {
+      type: "special",
+      active: true,
+      css: {
+        borderBottom: "1px solid $primary",
+        borderRight: "1px solid $primary",
+        borderLeft: "1px solid $primary",
+      },
+    },
+  ],
 });
 
 export const CollapseItemContainer = styled("div", {

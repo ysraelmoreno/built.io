@@ -29,4 +29,14 @@ export const TabsItemTrigger = styled("button", {
   backgroundColor: "transparent",
   justifyContent: "center",
   alignItems: "center",
+  transition: "all 0.4s ease",
+
+  "&:hover": {
+    cursor: "pointer",
+    backgroundColor: "rgba(255, 92, 0, 0.17)",
+  },
+
+  "&:active": {
+    backgroundColor: "rgba(255, 92, 0, 0.6)",
+  },
 });
