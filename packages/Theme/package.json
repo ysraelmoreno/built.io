@@ -1,5 +1,6 @@
 {
   "name": "@kaiju-ui/theme",
+  "description": "The theme of Kaiju-UI, the base of the Library",
   "version": "0.0.1-alpha",
   "main": "dist/index.js",
   "module": "dist/index.es.js",

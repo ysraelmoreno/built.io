@@ -3,7 +3,7 @@
   "author": "Ysrael Moreno <ysraelmoreno02@gmail.com>",
   "description": "A button component for Kaiju UI",
   "license": "MIT",
-  "version": "0.0.1-alpha",
+  "version": "0.0.1",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
