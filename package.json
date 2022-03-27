@@ -45,7 +45,7 @@
     "bootstrap": "lerna bootstrap --use-workspaces",
     "storybook": "start-storybook -p 6006",
     "serve": "storybook:serve",
-    "build": "build-storybook",
+    "build": "CI= build-storybook",
     "chromatic": "npx chromatic --project-token=0d7913157b21"
   },
   "devDependencies": {
