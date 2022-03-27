@@ -81,8 +81,6 @@ export const CollapseItemTrigger = styled("button", {
 export const CollapseContentContainer = styled("div", {
   display: "block",
   overflow: "hidden",
-  marginTop: "-10px",
-  padding: "0 15px",
   height: "0 ",
   borderBottom: "1px solid rgba(218, 218, 218, 0)",
   borderLeft: "1px solid rgba(218, 218, 218, 0)",
@@ -95,7 +93,6 @@ export const CollapseContentContainer = styled("div", {
   variants: {
     active: {
       true: {
-        padding: "20px 15px 15px 15px",
         height: "var(--collapse-content-height)",
         borderBottom: "1px solid rgba(218, 218, 218, 0.8)",
         borderLeft: "1px solid rgba(218, 218, 218, 0.8)",

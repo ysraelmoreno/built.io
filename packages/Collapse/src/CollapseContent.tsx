@@ -22,7 +22,7 @@ function CollapseContent({ children, value }: ICollpaseContentProps) {
         style={{
           [`--collapse-content-height` as any]: `${
             containerRef.current?.scrollHeight
-              ? containerRef.current?.scrollHeight + 10
+              ? containerRef.current?.scrollHeight
               : 0
           }px`,
         }}

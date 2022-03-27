@@ -46,6 +46,9 @@
     "storybook": "start-storybook -p 6006",
     "serve": "storybook:serve",
     "build": "build-storybook",
-    "build-static-webapp": "build-static-webapp"
+    "chromatic": "npx chromatic --project-token=0d7913157b21"
+  },
+  "devDependencies": {
+    "chromatic": "^6.5.3"
   }
 }
