@@ -11,4 +11,7 @@ module.exports = {
     "storybook-addon-outline",
   ],
   framework: "@storybook/react",
+  features: {
+    storyStoreV7: true,
+  },
 };
