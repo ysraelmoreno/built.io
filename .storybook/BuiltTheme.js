@@ -4,13 +4,13 @@ export default create({
   base: "dark",
   barSelectedColor: "#ff5c00",
   colorSecondary: "#ff5c00",
-  appBorderColor: "#f5f5f5",
   appBorderRadius: "5px",
 
-  appBg: "#000100",
-  appContentBg: "white",
+  appBg: "#1f1f1f",
+  appContentBg: "#1f1f1f",
+  textColor: "white",
 
-  barBg: "#000100",
+  barBg: "#1f1f1f",
 
   brandTitle: "Build.io Storybook",
   brandUrl: "https://example.com",

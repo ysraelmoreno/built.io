@@ -1,23 +1,5 @@
 import { styled, keyframes } from "@kaiju-ui/theme";
 
-const openCollapse = keyframes({
-  from: {
-    transform: "scaleY(0)",
-  },
-  to: {
-    transform: "scaleY(1)",
-  },
-});
-
-const closeCollapse = keyframes({
-  from: {
-    transform: "scaleY(1)",
-  },
-  to: {
-    transform: "scaleY(0)",
-  },
-});
-
 export const CollapseContainer = styled("div", {
   borderRadius: "10px",
   padding: "10px",
@@ -37,8 +19,7 @@ export const CollapseItemTrigger = styled("button", {
   background: "#FFF",
   height: "100%",
   border: "none",
-  borderTop: "2px solid $primary",
-  borderBottom: "2px solid $primary",
+  borderBottom: "1px solid #E5E5E5",
   display: "flex",
   borderRadius: "5px",
   justifyContent: "space-between",
